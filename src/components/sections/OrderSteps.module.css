@@ -1,0 +1,123 @@
+.section {
+  padding: var(--space-10) var(--space-4);
+  background-color: var(--color-surface-warm);
+}
+
+.container {
+  max-width: var(--container-narrow);
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: var(--space-8);
+}
+
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  color: var(--color-text);
+}
+
+.stepsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  position: relative;
+}
+
+.step {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+}
+
+.numberWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+  width: 44px;
+}
+
+.number {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  background-color: var(--color-surface);
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--color-primary-light);
+  box-shadow: var(--shadow-soft);
+}
+
+.connector {
+  width: 1.5px;
+  height: 40px;
+  background-color: var(--color-border);
+  margin-top: var(--space-2);
+}
+
+.content {
+  padding-top: var(--space-2);
+  flex: 1;
+}
+
+.stepTitle {
+  font-family: var(--font-display);
+  font-size: 1.125rem;
+  font-weight: 500;
+  color: var(--color-text);
+  margin-bottom: var(--space-1);
+}
+
+.stepDescription {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.5;
+}
+
+.ctaWrapper {
+  margin-top: var(--space-8);
+  display: flex;
+  justify-content: center;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-primary);
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: var(--space-3) var(--space-6);
+  border-radius: var(--radius-full);
+  box-shadow: var(--shadow-md);
+  transition: all var(--duration-fast) var(--ease-out);
+}
+
+.cta:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: var(--space-12) var(--space-8);
+  }
+
+  .header {
+    margin-bottom: var(--space-10);
+  }
+
+  .stepTitle {
+    font-size: 1.25rem;
+  }
+}
