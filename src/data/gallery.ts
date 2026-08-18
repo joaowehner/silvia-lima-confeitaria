@@ -1,5 +1,7 @@
 import type { Creation } from '../types/creation'
 
+const baseUrl = import.meta.env.BASE_URL
+
 /**
  * Catálogo de fotografias reais e referências visuais da Silvia Lima Confeitaria.
  * Todas as imagens foram obtidas do perfil oficial @silvialimaconfeitaria no Instagram.
@@ -15,7 +17,7 @@ export const creations: Creation[] = [
     evidenceNote: 'Fotografia publicada no perfil oficial @silvialimaconfeitaria demonstrando acabamento wave cake e morangos.',
     confidence: 'confirmed_url',
     tags: ['wave-cake', 'espatulado', 'morangos'],
-    image: '/images/creations/bolo-wave-cake-01.webp',
+    image: `${baseUrl}images/creations/bolo-wave-cake-01.webp`,
     instagramUrl: 'https://www.instagram.com/silvialimaconfeitaria/p/Dac8Daau3CP/',
     featured: true,
     verified: true,
@@ -30,7 +32,7 @@ export const creations: Creation[] = [
     evidenceNote: 'Fotografia publicada no perfil oficial @silvialimaconfeitaria demonstrando aplicação floral e pérolas.',
     confidence: 'confirmed_url',
     tags: ['floral', 'delicado', 'perolas'],
-    image: '/images/creations/bolo-floral-01.webp',
+    image: `${baseUrl}images/creations/bolo-floral-01.webp`,
     instagramUrl: 'https://www.instagram.com/silvialimaconfeitaria/p/C6rQPxGOrHt/',
     featured: true,
     verified: true,
@@ -45,7 +47,7 @@ export const creations: Creation[] = [
     evidenceNote: 'Fotografia publicada no perfil oficial @silvialimaconfeitaria demonstrando trabalho de bico em mini rosetas.',
     confidence: 'confirmed_url',
     tags: ['rosetas', 'delicado', 'artesanal'],
-    image: '/images/creations/bolo-rosetas-01.webp',
+    image: `${baseUrl}images/creations/bolo-rosetas-01.webp`,
     instagramUrl: 'https://www.instagram.com/silvialimaconfeitaria/p/DcBTxxIJBbO/',
     featured: true,
     verified: true,
@@ -60,7 +62,7 @@ export const creations: Creation[] = [
     evidenceNote: 'Fotografia publicada no perfil oficial @silvialimaconfeitaria demonstrando criação temática personalizada.',
     confidence: 'confirmed_url',
     tags: ['temático', 'personalizado', 'comemoração'],
-    image: '/images/creations/bolo-tematico-01.webp',
+    image: `${baseUrl}images/creations/bolo-tematico-01.webp`,
     instagramUrl: 'https://www.instagram.com/silvialimaconfeitaria/p/Db5-ArfOqoY/',
     featured: true,
     verified: true,
@@ -75,7 +77,7 @@ export const creations: Creation[] = [
     evidenceNote: 'Fotografia publicada no perfil oficial @silvialimaconfeitaria demonstrando produção de docinhos de festa.',
     confidence: 'confirmed_url',
     tags: ['docinhos', 'festa', 'artesanal'],
-    image: '/images/creations/docinhos-01.webp',
+    image: `${baseUrl}images/creations/docinhos-01.webp`,
     instagramUrl: 'https://www.instagram.com/silvialimaconfeitaria/p/DboDd4djrmN/',
     featured: false,
     verified: true,
@@ -90,7 +92,7 @@ export const creations: Creation[] = [
     evidenceNote: 'Fotografia publicada no perfil oficial @silvialimaconfeitaria demonstrando mini brownies com doce de leite.',
     confidence: 'confirmed_url',
     tags: ['brownie', 'chocolate', 'docinhos'],
-    image: '/images/creations/mini-brownie-01.webp',
+    image: `${baseUrl}images/creations/mini-brownie-01.webp`,
     instagramUrl: 'https://www.instagram.com/silvialimaconfeitaria/p/DboDd4djrmN/',
     featured: false,
     verified: true,
@@ -105,7 +107,7 @@ export const creations: Creation[] = [
     evidenceNote: 'Fotografia publicada no perfil oficial @silvialimaconfeitaria demonstrando mini pães de mel banhados.',
     confidence: 'confirmed_url',
     tags: ['pao-de-mel', 'chocolate', 'docinhos'],
-    image: '/images/creations/mini-pao-de-mel-01.webp',
+    image: `${baseUrl}images/creations/mini-pao-de-mel-01.webp`,
     instagramUrl: 'https://www.instagram.com/silvialimaconfeitaria/p/Db_fUCcnxjE/',
     featured: false,
     verified: true,
@@ -120,7 +122,7 @@ export const creations: Creation[] = [
     evidenceNote: 'Fotografia publicada no perfil oficial @silvialimaconfeitaria demonstrando técnica wave cake em degradê.',
     confidence: 'confirmed_url',
     tags: ['wave-cake', 'espatulado', 'degradê'],
-    image: '/images/creations/bolo-wave-cake-azul.webp',
+    image: `${baseUrl}images/creations/bolo-wave-cake-azul.webp`,
     instagramUrl: 'https://www.instagram.com/silvialimaconfeitaria/p/Db6BaNwDi0A/',
     featured: false,
     verified: true,
