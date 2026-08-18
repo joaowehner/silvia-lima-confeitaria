@@ -1,0 +1,16 @@
+{
+  "name": "Silvia Lima Confeitaria",
+  "short_name": "Silvia Lima",
+  "description": "Confeitaria artesanal em Campo Grande, MS. Bolos decorados, personalizados e docinhos finos.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#faf8f5",
+  "theme_color": "#faf8f5",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
