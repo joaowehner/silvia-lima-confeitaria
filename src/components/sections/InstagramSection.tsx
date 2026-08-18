@@ -68,7 +68,6 @@ export function InstagramSection() {
               <img
                 src={post.image}
                 alt={post.alt}
-                loading="lazy"
                 className={styles.postImage}
               />
               <div className={styles.postOverlay}>
