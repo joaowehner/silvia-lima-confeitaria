@@ -1,5 +1,5 @@
 .section {
-  padding: var(--space-10) var(--space-4);
+  padding: var(--space-8) var(--space-4);
   background-color: var(--color-bg);
 }
 
@@ -10,49 +10,49 @@
 
 .header {
   text-align: center;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
 }
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
   color: var(--color-text);
-  margin-bottom: var(--space-1);
+  margin-bottom: 2px;
 }
 
 .subtitle {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: var(--color-text-secondary);
 }
 
 .form {
   background-color: var(--color-surface);
   border: 1px solid var(--color-border-light);
-  padding: var(--space-6);
-  border-radius: var(--radius-xl);
-  box-shadow: var(--shadow-md);
+  padding: var(--space-5);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .fieldGroup {
   display: flex;
   flex-direction: column;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .field {
   display: flex;
   flex-direction: column;
-  gap: var(--space-1);
+  gap: 3px;
   flex: 1;
 }
 
 .field label {
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--color-text);
 }
@@ -61,16 +61,22 @@
 .field select,
 .field textarea {
   width: 100%;
-  padding: var(--space-3) var(--space-4);
+  padding: 8px 12px;
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 16px; /* 16px prevents iOS Safari auto-zoom */
   color: var(--color-text);
   background-color: var(--color-bg);
-  border: 1.5px solid var(--color-border);
-  border-radius: var(--radius-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
   transition: border-color var(--duration-fast) var(--ease-out),
               box-shadow var(--duration-fast) var(--ease-out),
               background-color var(--duration-fast) var(--ease-out);
+}
+
+.field input::placeholder,
+.field textarea::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.7;
 }
 
 .field input:focus,
@@ -79,12 +85,12 @@
   outline: none;
   border-color: var(--color-primary);
   background-color: #ffffff;
-  box-shadow: 0 0 0 3px rgba(196, 149, 106, 0.2);
+  box-shadow: 0 0 0 2px rgba(196, 149, 106, 0.18);
 }
 
 .field textarea {
   resize: vertical;
-  min-height: 90px;
+  min-height: 80px;
 }
 
 .submitBtn {
@@ -95,21 +101,21 @@
   background-color: #25D366;
   color: #ffffff;
   font-family: var(--font-body);
-  font-size: 1rem;
+  font-size: 0.9375rem;
   font-weight: 600;
-  padding: var(--space-4) var(--space-6);
+  padding: 12px var(--space-5);
   border: none;
   border-radius: var(--radius-full);
   cursor: pointer;
-  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
+  box-shadow: 0 3px 10px rgba(37, 211, 102, 0.25);
   transition: all var(--duration-fast) var(--ease-out);
-  margin-top: var(--space-2);
+  margin-top: var(--space-1);
 }
 
 .submitBtn:hover {
   background-color: #20BA56;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
 }
 
 .submitBtn:active {
@@ -124,10 +130,10 @@
 
 @media (min-width: 768px) {
   .section {
-    padding: var(--space-12) var(--space-8);
+    padding: var(--space-10) var(--space-8);
   }
 
   .form {
-    padding: var(--space-8);
+    padding: var(--space-7);
   }
 }

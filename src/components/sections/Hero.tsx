@@ -8,11 +8,11 @@ import { business, buildWhatsAppUrl } from '../../data/business'
 const CakeScene = lazy(() => import('../three/CakeScene'))
 
 const fadeUp: Variants = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
   },
 }
 
@@ -20,7 +20,7 @@ const fadeIn: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { duration: 0.7, delay: 0.25, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.6, delay: 0.2, ease: [0.16, 1, 0.3, 1] },
   },
 }
 
@@ -83,9 +83,9 @@ export function Hero() {
         {/* 3D Cake Centerpiece */}
         <motion.div
           className={styles.visual}
-          initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.94 }}
+          initial={{ opacity: 0, scale: shouldReduceMotion ? 1 : 0.96 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.9, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
         >
           <Suspense fallback={<CakeFallback />}>
             <CakeScene />
@@ -124,7 +124,7 @@ export function Hero() {
         className={styles.scrollIndicator}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ delay: 1.2, duration: 0.8 }}
+        transition={{ delay: 1.0, duration: 0.6 }}
         aria-hidden="true"
       >
         <div className={styles.scrollLine} />

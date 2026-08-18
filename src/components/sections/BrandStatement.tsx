@@ -3,11 +3,11 @@ import type { Variants } from 'framer-motion'
 import styles from './BrandStatement.module.css'
 
 const revealVariants: Variants = {
-  hidden: { opacity: 0, y: 20 },
+  hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
+    transition: { duration: 0.6, ease: [0.16, 1, 0.3, 1] },
   },
 }
 
@@ -26,9 +26,9 @@ export function BrandStatement() {
         >
           <div className={styles.decorativeLine} aria-hidden="true" />
           <p className={styles.statement}>
-            Cada criação carrega o cuidado de quem faz à mão, com ingredientes
-            escolhidos e atenção a cada detalhe. Da massa ao acabamento, o sabor
-            e a beleza caminham juntos.
+            Cada criação carrega o cuidado de um trabalho feito à mão. Do
+            formato ao acabamento, cada detalhe é pensado para fazer parte de
+            momentos especiais.
           </p>
           <div className={styles.decorativeLine} aria-hidden="true" />
         </motion.div>

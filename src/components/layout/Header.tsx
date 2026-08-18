@@ -14,7 +14,7 @@ export function Header() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)
+      setIsScrolled(window.scrollY > 15)
     }
     window.addEventListener('scroll', handleScroll, { passive: true })
     return () => window.removeEventListener('scroll', handleScroll)
@@ -78,7 +78,7 @@ export function Header() {
           className={`${styles.hamburger} ${isMobileMenuOpen ? styles.hamburgerOpen : ''}`}
           onClick={toggleMenu}
           aria-expanded={isMobileMenuOpen}
-          aria-label="Abrir menu"
+          aria-label={isMobileMenuOpen ? 'Fechar menu' : 'Abrir menu'}
         >
           <span className={styles.line} />
           <span className={styles.line} />
@@ -86,20 +86,38 @@ export function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Dedicated Solid Panel */}
       <AnimatePresence>
         {isMobileMenuOpen && (
           <motion.div
             className={styles.mobileMenu}
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
+            initial={{ opacity: 0, y: -8 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -8 }}
+            transition={{ duration: 0.28, ease: [0.16, 1, 0.3, 1] }}
           >
+            {/* Top Bar for Mobile Menu */}
+            <div className={styles.mobileMenuHeader}>
+              <span className={styles.mobileMenuLogo}>Silvia Lima</span>
+              <button
+                className={styles.mobileCloseBtn}
+                onClick={closeMenu}
+                aria-label="Fechar menu"
+              >
+                ✕
+              </button>
+            </div>
+
             <nav className={styles.mobileNav} aria-label="Menu mobile">
               <ul className={styles.mobileNavList}>
-                {navigation.map((item) => (
-                  <li key={item.id}>
+                {navigation.map((item, index) => (
+                  <motion.li
+                    key={item.id}
+                    className={styles.mobileNavItem}
+                    initial={{ opacity: 0, y: 10 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ delay: 0.05 + index * 0.04, duration: 0.3 }}
+                  >
                     <a
                       href={item.href}
                       className={styles.mobileNavLink}
@@ -107,18 +125,26 @@ export function Header() {
                     >
                       {item.label}
                     </a>
-                  </li>
+                  </motion.li>
                 ))}
               </ul>
-              <a
-                href={whatsappUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={styles.mobileCtaButton}
-                onClick={closeMenu}
+
+              <motion.div
+                className={styles.mobileCtaContainer}
+                initial={{ opacity: 0, y: 10 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.25, duration: 0.3 }}
               >
-                Pedir Orçamento pelo WhatsApp
-              </a>
+                <a
+                  href={whatsappUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className={styles.mobileCtaButton}
+                  onClick={closeMenu}
+                >
+                  Pedir Orçamento pelo WhatsApp
+                </a>
+              </motion.div>
             </nav>
           </motion.div>
         )}

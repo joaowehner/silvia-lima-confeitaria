@@ -1,7 +1,6 @@
-/* 3. BrandStatement.module.css */
 .section {
   background-color: var(--color-bg-warm);
-  padding: var(--space-12) var(--space-4);
+  padding: var(--space-7) var(--space-4);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -13,33 +12,31 @@
   position: relative;
 }
 
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .decorativeLine {
-  width: 40px;
-  height: 2px;
+  width: 28px;
+  height: 1px;
   background-color: var(--color-primary);
-  margin: 0 auto var(--space-6);
+  opacity: 0.6;
+  margin: var(--space-2) auto;
 }
 
 .statement {
   font-family: var(--font-display);
-  font-size: 1.5rem;
-  line-height: 1.4;
-  color: var(--color-primary-dark);
-  margin-bottom: var(--space-6);
-}
-
-.signature {
-  font-family: var(--font-body);
-  font-size: 1rem;
-  color: var(--color-text-secondary);
-  font-style: italic;
+  font-size: clamp(1.0625rem, 2.8vw, 1.4375rem);
+  line-height: 1.45;
+  color: var(--color-text);
+  margin: var(--space-2) 0;
+  max-width: 580px;
 }
 
 @media (min-width: 768px) {
   .section {
-    padding: var(--space-12) var(--space-8);
-  }
-  .statement {
-    font-size: 2.25rem;
+    padding: var(--space-9) var(--space-8);
   }
 }

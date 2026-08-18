@@ -12,7 +12,7 @@ export function WhatsAppFab() {
     const handleScroll = () => {
       const scrollPosition = window.scrollY + window.innerHeight
       const documentHeight = document.documentElement.scrollHeight
-      setIsVisible(documentHeight - scrollPosition > 200)
+      setIsVisible(documentHeight - scrollPosition > 160)
     }
 
     window.addEventListener('scroll', handleScroll, { passive: true })
@@ -31,8 +31,8 @@ export function WhatsAppFab() {
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
-        width="28"
-        height="28"
+        width="23"
+        height="23"
         viewBox="0 0 24 24"
         fill="currentColor"
         aria-hidden="true"

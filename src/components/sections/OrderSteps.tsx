@@ -6,22 +6,19 @@ import styles from './OrderSteps.module.css'
 const steps = [
   {
     title: 'Conte o que está imaginando',
-    description:
-      'Descreva o tipo de bolo ou doce, a ocasião e o estilo que deseja.',
+    description: 'Descreva a ocasião, estilo ou tema do bolo ou doces.',
   },
   {
     title: 'Informe data e quantidade',
-    description:
-      'Precisamos saber quando será o evento e a quantidade estimada.',
+    description: 'Informe a data do evento e o número de convidados.',
   },
   {
     title: 'Alinhe os detalhes',
-    description:
-      'Pelo WhatsApp, alinhamos estilo, cores, acabamento e orçamento.',
+    description: 'Pelo WhatsApp, alinhamos acabamento, cores e orçamento.',
   },
   {
     title: 'Sua encomenda ganha forma',
-    description: 'Preparamos tudo com cuidado para o seu momento especial.',
+    description: 'Preparamos tudo com carinho para o seu momento.',
   },
 ]
 
@@ -29,12 +26,12 @@ const containerVariants: Variants = {
   hidden: { opacity: 0 },
   visible: {
     opacity: 1,
-    transition: { staggerChildren: 0.15 },
+    transition: { staggerChildren: 0.12 },
   },
 }
 
 const itemVariants: Variants = {
-  hidden: { opacity: 0, y: 16 },
+  hidden: { opacity: 0, y: 12 },
   visible: {
     opacity: 1,
     y: 0,
@@ -92,10 +89,10 @@ export function OrderSteps() {
 
         <motion.div
           className={styles.ctaWrapper}
-          initial={shouldReduceMotion ? false : { opacity: 0, y: 16 }}
+          initial={shouldReduceMotion ? false : { opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.2 }}
-          transition={{ delay: 0.3, duration: 0.5 }}
+          transition={{ delay: 0.2, duration: 0.5 }}
         >
           <a
             href={whatsappUrl}

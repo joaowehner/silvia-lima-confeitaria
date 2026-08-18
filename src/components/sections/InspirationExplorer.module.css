@@ -1,5 +1,5 @@
 .section {
-  padding: var(--space-10) var(--space-4);
+  padding: var(--space-8) var(--space-4);
   background-color: var(--color-bg-warm);
 }
 
@@ -10,48 +10,48 @@
 
 .header {
   text-align: center;
-  margin-bottom: var(--space-6);
+  margin-bottom: var(--space-5);
 }
 
 .caption {
   font-family: var(--font-body);
-  font-size: 0.8125rem;
+  font-size: 0.75rem;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.14em;
   color: var(--color-primary);
   font-weight: 600;
-  margin-bottom: var(--space-2);
+  margin-bottom: 2px;
 }
 
 .title {
   font-family: var(--font-display);
-  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-size: clamp(1.5rem, 3.5vw, 2.25rem);
   color: var(--color-text);
-  margin-bottom: var(--space-2);
+  margin-bottom: var(--space-1);
 }
 
 .subtitle {
   font-family: var(--font-body);
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
   color: var(--color-text-secondary);
-  max-width: 540px;
+  max-width: 480px;
   margin: 0 auto;
-  line-height: 1.5;
+  line-height: 1.4;
 }
 
 .filterContainer {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2);
+  gap: 6px;
   justify-content: center;
-  margin-bottom: var(--space-8);
-  padding: var(--space-1) 0;
+  margin-bottom: var(--space-6);
+  padding: 2px 0;
 }
 
 .filterChip {
-  padding: var(--space-2) var(--space-4);
+  padding: 5px 13px;
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 500;
   color: var(--color-text-secondary);
   background-color: var(--color-surface);
@@ -71,7 +71,7 @@
   background-color: var(--color-primary);
   color: #ffffff;
   border-color: var(--color-primary);
-  box-shadow: var(--shadow-soft);
+  box-shadow: 0 2px 6px rgba(196, 149, 106, 0.2);
 }
 
 .activeChip:hover {
@@ -83,7 +83,7 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--space-4);
+  gap: var(--space-3);
 }
 
 .card {
@@ -98,7 +98,7 @@
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-md);
 }
 
@@ -106,7 +106,7 @@
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 3.8;
-  background: linear-gradient(145deg, #fbf7f2 0%, #efe7dc 100%);
+  background-color: var(--color-bg);
   overflow: hidden;
 }
 
@@ -118,7 +118,7 @@
 }
 
 .card:hover .cardImage {
-  transform: scale(1.05);
+  transform: scale(1.04);
 }
 
 .placeholderPattern {
@@ -128,28 +128,28 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--space-4);
+  padding: var(--space-3);
   text-align: center;
   background: radial-gradient(circle at center, rgba(255, 255, 255, 0.7) 0%, rgba(245, 240, 234, 0.9) 100%);
 }
 
 .placeholderIcon {
-  font-size: 2.25rem;
-  margin-bottom: var(--space-1);
+  font-size: 1.75rem;
+  margin-bottom: 2px;
   opacity: 0.85;
 }
 
 .placeholderName {
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 500;
   color: var(--color-text);
-  margin-bottom: var(--space-1);
+  margin-bottom: 2px;
 }
 
 .placeholderTag {
   font-family: var(--font-body);
-  font-size: 0.75rem;
+  font-size: 0.6875rem;
   color: var(--color-primary);
   font-weight: 500;
   text-transform: lowercase;
@@ -158,14 +158,14 @@
 .overlay {
   position: absolute;
   inset: 0;
-  background: rgba(59, 47, 42, 0.65);
+  background: rgba(59, 47, 42, 0.55);
   backdrop-filter: blur(2px);
   display: flex;
   align-items: center;
   justify-content: center;
   opacity: 0;
   transition: opacity var(--duration-fast) var(--ease-out);
-  padding: var(--space-4);
+  padding: var(--space-3);
 }
 
 .card:hover .overlay,
@@ -177,9 +177,9 @@
   background-color: var(--color-surface);
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   font-weight: 600;
-  padding: var(--space-3) var(--space-5);
+  padding: 8px 16px;
   border-radius: var(--radius-full);
   text-decoration: none;
   box-shadow: var(--shadow-md);
@@ -189,11 +189,11 @@
 .ctaButton:hover {
   background-color: var(--color-primary);
   color: #ffffff;
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
 
 .cardInfo {
-  padding: var(--space-4);
+  padding: 10px 12px;
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -201,28 +201,29 @@
 
 .categoryBadge {
   align-self: flex-start;
-  font-size: 0.6875rem;
+  font-size: 0.625rem;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
   color: var(--color-primary-dark);
   background-color: var(--color-bg-warm);
-  padding: 2px 8px;
-  border-radius: var(--radius-sm);
-  margin-bottom: var(--space-2);
+  padding: 2px 6px;
+  border-radius: var(--radius-xs);
+  margin-bottom: 3px;
 }
 
 .cardName {
   font-family: var(--font-display);
-  font-size: 1.125rem;
+  font-size: 0.9375rem;
+  font-weight: 500;
   color: var(--color-text);
-  margin-bottom: var(--space-1);
+  margin-bottom: 2px;
 }
 
 .cardDescription {
-  font-size: 0.875rem;
+  font-size: 0.8125rem;
   color: var(--color-text-secondary);
-  line-height: 1.4;
+  line-height: 1.35;
 }
 
 @media (min-width: 540px) {
@@ -233,11 +234,11 @@
 
 @media (min-width: 900px) {
   .section {
-    padding: var(--space-12) var(--space-8);
+    padding: var(--space-10) var(--space-8);
   }
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-6);
+    gap: var(--space-5);
   }
 }
 

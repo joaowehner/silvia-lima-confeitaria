@@ -79,13 +79,13 @@ export function OrderBuilder() {
           <div className={styles.fieldGroup}>
             <div className={styles.field}>
               <label htmlFor="guests">
-                Quantidade aproximada de pessoas
+                Quantidade estimada de pessoas
               </label>
               <input
                 type="number"
                 name="guests"
                 id="guests"
-                placeholder="30"
+                placeholder="Ex: 30"
                 value={formData.guests}
                 onChange={handleChange}
                 min="1"
@@ -98,7 +98,7 @@ export function OrderBuilder() {
                 type="text"
                 name="theme"
                 id="theme"
-                placeholder="Ex: Floral, Colorido, Minimalista..."
+                placeholder="Ex: Floral, Minimalista, Super Mario..."
                 value={formData.theme}
                 onChange={handleChange}
               />
@@ -111,7 +111,7 @@ export function OrderBuilder() {
               type="text"
               name="colors"
               id="colors"
-              placeholder="Ex: Rosa e dourado"
+              placeholder="Ex: Rosa e dourado, Tons pastéis..."
               value={formData.colors}
               onChange={handleChange}
             />
@@ -122,18 +122,18 @@ export function OrderBuilder() {
             <textarea
               name="notes"
               id="notes"
-              placeholder="Conte mais sobre o que imagina..."
+              placeholder="Conte mais sobre o que está imaginando..."
               value={formData.notes}
               onChange={handleChange}
-              rows={4}
+              rows={3}
             />
           </div>
 
           <button type="submit" className={styles.submitBtn}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="22"
-              height="22"
+              width="20"
+              height="20"
               viewBox="0 0 24 24"
               fill="currentColor"
               aria-hidden="true"
